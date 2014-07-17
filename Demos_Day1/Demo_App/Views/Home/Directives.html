@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html ng-app="tApp">
+<head>
+    <title></title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav"></ul>
+            </div>
+        </div>
+
+        <div ng-controller="TrainingController" style="padding-left: 20px; padding-right: 20px">
+
+            <div ng-bind="myList"></div>
+
+            <div ng-bind-html="snippet">Some Title</div>
+
+            <h2 ng-show="boolValue">Show this</h2>
+            <h2 ng-hide="boolValue">Hide this</h2>
+
+            <button class="btn" ng-disabled="buttonDisabled">Just a Button</button>
+
+            <div class="row">
+                <div class="span11">
+                    @*<h2>{{event.name}}</h2>*@
+                    <h2 ng-class="myClass" ng-bind="event.name"></h2>
+                    <h2 ng-style="myStyle" ng-bind-template="{{event.name}} {{event.date}}"></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="~/Scripts/jquery-2.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+
+    <script src="~/Scripts/angular-sanitize.min.js"></script>
+
+    <script src="~/Scripts/app/app.js"></script>
+    <script src="~/Scripts/app/controllers/DirectivesController.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<div style="padding-left: 20px; padding-right: 20px">
+    <div class="container">
+        <h1>New Event</h1>
+        <hr />
+        <form name="frmNewEvent" novalidate>
+            <fieldset>
+                <legend>Create a New Event</legend>
+                <label for="eventName">Event Name: </label>
+                <input name="eventName" ng-required="true" ng-model="event.name" type="text" placeholder="Name of your Event..." />
+                <span ng-show="frmNewEvent.eventName.$error.required" style="color: red">Event Name is Required.</span>
+
+                <label for="eventDate">Event Date: </label>
+                <input name="eventDate" ng-model="event.date" type="text" placeholder="Please Select Date..."
+                    datepicker-popup="dd-MMMM-yyyy" id-open="opened" show-weeks="false"
+                    ng-required="true" close-text="Close" />
+                <span ng-show="frmNewEvent.eventDate.$error.required" style="color: red">Date is Required.</span>
+
+                <label for="eventTime">Event Time: </label>
+                <input ng-model="event.time" type="text" placeholder="Event Time..." />
+
+                <label for="eventLocation">Event Location:</label>
+                <input ng-model="event.location.address" type="text" placeholder="Address for Event..." />
+                <br />
+                <input ng-model="event.location.city" type="text" placeholder="City..." class="input-small" />
+                <input ng-model="event.location.state" type="text" placeholder="State..." class="input-small" />
+
+                <label for="eventImageUrl">Image:</label>
+                <input ng-model="event.imageUrl" type="url" placeholder="Image Url for Event..." />
+            </fieldset>
+
+            <img ng-src="{{event.imageUrl}}" />
+
+            <br />
+            <br />
+            <button ng-click="saveEvent(frmNewEvent, event)" type="submit"
+                class="btn btn-primary"
+                ng-disabled="frmNewEvent.$invalid">
+                Save</button>
+            <button ng-click="cancelEdit()" type="button" class="btn btn-default">Cancel</button>
+        </form>
+    </div>
+</div>

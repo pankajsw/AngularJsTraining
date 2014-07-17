@@ -1,0 +1,132 @@
+Event Directives
+	ngClick
+	ngDblClick
+	ngMousedown
+	ngMouseenter
+	ngMouseleave
+	ngMousemove
+	ngMouseup
+	ngMouseover
+	ngChange
+
+Other imp Directives
+	ngApp
+	ngController
+	ngBind
+	ngBindTemplate
+	ngBindHtml
+	ngBindHtmlUnsafe
+	ngHide
+	ngCloak
+	ngStyle
+	ngClass
+	ngClassEven
+	ngClassOdd
+
+HTML Quirks
+	ngDisabled
+	ngChecked
+	ngMultiple
+	ngReadOnly
+	ngSelected
+
+Few More
+	ngForm
+	ngSubmit
+	ngHref
+	ngsrc
+	ngNonBindable
+
+---------------------------------------------------------------------
+
+Syntax:
+
+	{{expression | filter}}
+
+
+Filters
+
+	What they can do?
+
+	Modify the Output
+	Formatting
+	Sorting a DataSet
+	Filtering a DataSet
+
+Inbuilt Filters
+
+	uppercase
+	lowercase
+	number
+	currency
+	date
+	json
+	orderBy
+	limitTo
+	filter
+
+Custom Filter
+
+	module.filter('name',function(){
+	return function(input,filter parameters)
+	{
+		Filter logic
+	}
+	});
+
+------------------------------------------------------------------------
+
+ngModel can be applied only on
+	
+	Input Types (Editable)
+	Select
+	TextArea
+
+------------------------------------------------------------------------
+
+Angular Validation Directives
+
+ng-required
+ng-minlength
+mg-maxlength
+ng-pattern
+
+Form Properties
+CSS Classes
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title></title>
+    </head>
+    <body ng-controller="HWController">
+        <div>
+            <h1>{{helloMessage}}</h1>
+        </div>
+
+        <script src="../../Scripts/angular.min.js"></script>
+        <script type="text/javascript">
+            function HWController($scope) {
+                $scope.helloMessage = "Hello from COntroller";
+            }
+        </script>
+    </body>
+</html>

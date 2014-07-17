@@ -1,0 +1,17 @@
+﻿/// <reference path="../app.js" />
+
+trainingsApp.filter('durations', function () {
+    return function (duration) {
+        switch (duration)
+        {
+            case 1:
+                return "One Hour";
+            case 2:
+                return "Two Hour";
+            case 3:
+                return "Half Day";
+            case 4:
+                return "Full Day";
+        }
+    }
+})

@@ -1,0 +1,1 @@
+﻿var trainingsApp = angular.module('tApp', ['ui.bootstrap', 'ngResource']);
