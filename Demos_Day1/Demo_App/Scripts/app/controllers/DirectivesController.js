@@ -13,7 +13,6 @@ trainingsApp.controller('TrainingController',
 
         $scope.buttonDisabled = true;
 
-
         $scope.event = {
             name: 'Angular JS Fundamentals',
             date: new Date(2014, 7, 10),

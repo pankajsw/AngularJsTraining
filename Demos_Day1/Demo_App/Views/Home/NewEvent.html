@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html ng-app="tApp">
 <head>
-    <title></title>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/Site.css" rel="stylesheet" />
+    <title>Anglar Js Training</title>
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Content/Site.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -11,7 +11,7 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <ul class="nav">
-                    <li><a href="/Home/NewEvent">New Event</a></li>
+                    <li><a href="../Home/newEvent.html">New Event</a></li>
                 </ul>
             </div>
         </div>
@@ -29,9 +29,9 @@
                         
                         <label for="eventDate">Event Date: </label>
                         <input id="eventDate" name="eventDate" ng-pattern="/\d\d/\d\d/\d\d\d\d/" ng-model="event.date" type="text" placeholder="Format (mm/dd/yyyy)..." />
-                        @*<input name="eventDate" ng-model="event.date" type="text" placeholder="Format (mm/dd/yyyy)..." 
+                        <!-- @*<input name="eventDate" ng-model="event.date" type="text" placeholder="Format (mm/dd/yyyy)..." 
                             datepicker-popup="{{format}}" id-open="opened" show-weeks="false"
-                            ng-required="true" close-text="Close"/>*@
+                            ng-required="true" close-text="Close"/>*@ -->
 
                         <span ng-show="frmNewEvent.eventDate.$error.pattern" style="color:red">Invalid Date.</span>
 
@@ -52,9 +52,7 @@
 
                     <br />
                     <br />
-                    <button ng-click="saveEvent(frmNewEvent, event)" type="submit" 
-                        class="btn btn-primary"
-                        ng-disabled="frmNewEvent.$invalid">Save</button>
+                    <button ng-click="saveEvent(frmNewEvent, event)" type="submit" class="btn btn-primary" ng-disabled="frmNewEvent.$invalid">Save</button>
                     <button ng-click="cancelEdit()" type="button" class="btn btn-default">Cancel</button>
                 </form>
             </div>
@@ -63,14 +61,14 @@
 
 
 
-    <script src="~/Scripts/jquery-2.1.1.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/angular.min.js"></script>
+    <script src="../../Scripts/jquery-2.1.1.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/angular.min.js"></script>
 
-    <script src="~/Scripts/ui-bootstrap-tpls-0.10.0.min.js"></script>
-    <script src="~/Scripts/jquery-ui-1.10.4.min.js"></script>
-    <script src="~/Scripts/app/app.js"></script>
-    <script src="~/Scripts/app/controllers/EditEventController.js"></script>
+    <script src="../../Scripts/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script src="../../Scripts/jquery-ui-1.10.4.min.js"></script>
+    <script src="../../Scripts/app/app.js"></script>
+    <script src="../../Scripts/app/controllers/EditEventController.js"></script>
 
     <script>
         $(document).ready(function () {
