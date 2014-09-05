@@ -13,10 +13,10 @@ trainingsApp.controller('TrainingController',
         //    function (sCode) { console.log(sCode); });
 
         //Step 2 - With $http
-        var dataPromise = trainingDataService.training();
-        dataPromise.success(function (data) { $scope.event = data; });
+        // var dataPromise = trainingDataService.training();
+        // dataPromise.success(function (data) { $scope.event = data; });
 
-        //$scope.event = trainingDataService.training;
+        $scope.event = trainingDataService.training;
 
         $scope.upVoteSession = function (session) {
             session.upVoteCount++;

@@ -1,9 +1,10 @@
 ﻿/// <reference path="../angular.js" />
 
-//var trainingsApp = angular.module('tApp', []);
+//For NewEvent.html page
+// var trainingsApp = angular.module('tApp', []);
 
 //Only For Directives Page
-//var trainingsApp = angular.module('tApp', ['ngSanitize']);
+// var trainingsApp = angular.module('tApp', ['ngSanitize']);
 
-//For Angular UI
+//For Angular UI Index.html page
 var trainingsApp = angular.module('tApp', ['ui.bootstrap']);

@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html ng-app="tApp">
 <head>
-    <title>Anglar Js Training</title>
+    <title></title>
     <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../../Content/Site.css" rel="stylesheet" />
 </head>
@@ -11,14 +11,14 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <ul class="nav">
-                    <li><a href="../Home/newEvent.html">New Event</a></li>
+                    <li><a href="/Home/NewEvent">New Event</a></li>
                 </ul>
             </div>
         </div>
 
         <div ng-controller="TrainingController" style="padding-left: 20px; padding-right: 20px">
 
-            <!-- <img ng-src="{{event.imageUrl}}" alt="{{event.name}}" /> -->
+            <img ng-src="{{event.imageUrl}}" alt="{{event.name}}" width="300" />
 
             <div class="row">
                 <div class="span11">
@@ -41,34 +41,24 @@
                 </div>
             </div>
 
-           <!--  @* Number Filter *@
-           @* <div>{{3.145678 | number:2}}</div>
-            <div>{{3 | number:2}}</div>*@
-
-            @* Json Filter *@
-            @*<div>{{ {a:3,b:'hi',c:{aa:35} } | json }}</div>*@ -->
-
             <hr />
             <h3>Sessions</h3>
 
             Order By:
-            <select ng-model="sortorder" class="input-small" >
+            <select ng-model="sortorder" class="input-small">
                 <option selected value="name">Name</option>
                 <option value="-upVoteCount">Votes</option>
             </select>
 
             Show:
-            <select ng-model="query.level" class="input-small" >
+            <select ng-model="query.level" class="input-small">
                 <option selected value="">All</option>
                 <option value="introductory">Introductory</option>
                 <option value="intermediate">Intermediate</option>
                 <option value="advance">Advance</option>
             </select>
 
-            <br><br>
-
             <ul class="thumbnails">
-                <!-- @*<li ng-repeat="session in event.sessions | orderBy:sortorder | limitTo:2">*@ -->
                 <li ng-repeat="session in event.sessions | orderBy:sortorder | filter:query">
                     <div class="row session">
                         <div class="span0 well votingWidget">
@@ -95,14 +85,18 @@
         </div>
     </div>
 
+
+
     <script src="../../Scripts/jquery-2.1.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/angular.min.js"></script>
 
-    <script src="../../Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="../../Scripts/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script src="../../Scripts/angular-resource.min.js"></script>
 
     <script src="../../Scripts/app/app.js"></script>
     <script src="../../Scripts/app/controllers/TrainingController.js"></script>
+    <script src="../../Scripts/app/services/TrainingDataService.js"></script>
 
     <script src="../../Scripts/app/filters/filters.js"></script>
 </body>

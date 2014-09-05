@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html ng-app="tApp">
+<head>
+    <title>Anglar Js Training</title>
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="#/newEvent">New Event</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ng-view>
+
+        </ng-view>
+
+    </div>
+
+    <script src="../../Scripts/jquery-2.1.1.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/angular.min.js"></script>
+    
+    <script src="../../Scripts/angular-route.min.js"></script>
+    <script src="../../Scripts/ui-bootstrap-tpls-0.10.0.min.js"></script>
+
+    <script src="../../Scripts/app/app.js"></script>
+    <script src="../../Scripts/app/controllers/TrainingController.js"></script>
+    <script src="../../Scripts/app/controllers/EditEventController.js"></script>
+    <script src="../../Scripts/app/controllers/EventListController.js"></script>
+
+    <script src="../../Scripts/app/services/TrainingDataService.js"></script>
+
+    <script src="../../Scripts/app/filters/filters.js"></script>
+    <script src="../../Scripts/app/filters/MvcToJsDate.js"></script>
+</body>
+</html>

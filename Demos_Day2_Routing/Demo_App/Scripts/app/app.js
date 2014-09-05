@@ -3,19 +3,19 @@
 
         $routeProvider.when("/events",
             {
-                templateUrl: 'Home/EventList',
+                templateUrl: 'EventList.html',
                 controller: 'EventListController'
             });
 
         $routeProvider.when("/event/:eventId",
             {
-                templateUrl: 'Home/EventDetails',
+                templateUrl: 'EventDetails.html',
                 controller: 'TrainingController'
             });
 
         $routeProvider.when("/newEvent",
             {
-                templateUrl: 'Home/NewEvent',
+                templateUrl: 'NewEvent.html',
                 controller: 'EditEventController'
             });
 
